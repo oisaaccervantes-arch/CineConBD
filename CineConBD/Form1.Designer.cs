@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pelicula));
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,19 +38,30 @@
             this.numDuracion = new System.Windows.Forms.NumericUpDown();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.cbClasificacion = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnActualizar = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPeliculas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(809, 218);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPeliculas.AllowUserToAddRows = false;
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Location = new System.Drawing.Point(0, 0);
+            this.dgvPeliculas.MultiSelect = false;
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.ReadOnly = true;
+            this.dgvPeliculas.RowHeadersWidth = 51;
+            this.dgvPeliculas.RowTemplate.Height = 24;
+            this.dgvPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPeliculas.Size = new System.Drawing.Size(809, 218);
+            this.dgvPeliculas.TabIndex = 0;
             // 
             // label1
             // 
@@ -117,11 +129,68 @@
             this.cbClasificacion.Size = new System.Drawing.Size(121, 24);
             this.cbClasificacion.TabIndex = 8;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevo,
+            this.btnGuardar,
+            this.btnEditar,
+            this.btnEliminar,
+            this.btnActualizar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(814, 27);
+            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(76, 24);
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(86, 24);
+            this.btnGuardar.Text = "Guardar";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(72, 24);
+            this.btnEditar.Text = "Editar";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(87, 24);
+            this.btnEliminar.Text = "Eliminar";
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(99, 24);
+            this.btnActualizar.Text = "Actualizar";
+            // 
             // Pelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(814, 572);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cbClasificacion);
             this.Controls.Add(this.cbGenero);
             this.Controls.Add(this.numDuracion);
@@ -130,11 +199,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPeliculas);
             this.Name = "Pelicula";
             this.Text = "Pelicula";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +213,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPeliculas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -151,6 +222,12 @@
         private System.Windows.Forms.NumericUpDown numDuracion;
         private System.Windows.Forms.ComboBox cbGenero;
         private System.Windows.Forms.ComboBox cbClasificacion;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnNuevo;
+        private System.Windows.Forms.ToolStripButton btnGuardar;
+        private System.Windows.Forms.ToolStripButton btnEditar;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.ToolStripButton btnActualizar;
     }
 }
 
