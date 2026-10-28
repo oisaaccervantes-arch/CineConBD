@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,17 +48,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Clasificacion.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Clasificacion.Designer.cs"><DependentUpon>Clasificacion.cs</DependentUpon></Compile>
+    <Compile Include="CiudadEstado.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="CiudadEstado.Designer.cs"><DependentUpon>CiudadEstado.cs</DependentUpon></Compile>
+    <Compile Include="Cliente.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Cliente.Designer.cs"><DependentUpon>Cliente.cs</DependentUpon></Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Funcion.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Funcion.Designer.cs"><DependentUpon>Funcion.cs</DependentUpon></Compile>
+    <Compile Include="Genero.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Genero.Designer.cs"><DependentUpon>Genero.cs</DependentUpon></Compile>
+    <Compile Include="Pelicula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Pelicula.Designer.cs">
+      <DependentUpon>Pelicula.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Principal.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Principal.Designer.cs"><DependentUpon>Principal.cs</DependentUpon></Compile>
+    <Compile Include="Sala.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Sala.Designer.cs"><DependentUpon>Sala.cs</DependentUpon></Compile>
+    <Compile Include="Sucursal.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Sucursal.Designer.cs"><DependentUpon>Sucursal.cs</DependentUpon></Compile>
+    <Compile Include="TipoBoleto.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="TipoBoleto.Designer.cs"><DependentUpon>TipoBoleto.cs</DependentUpon></Compile>
+    <Compile Include="Venta.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="Venta.Designer.cs"><DependentUpon>Venta.cs</DependentUpon></Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Pelicula.resx">
+      <DependentUpon>Pelicula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

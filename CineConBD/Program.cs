@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,15 +8,12 @@ namespace CineConBD
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pelicula());
+            Application.Run(new Principal());
         }
     }
 }
